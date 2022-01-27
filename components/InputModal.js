@@ -18,7 +18,7 @@ import {
 
 
 function InputModal({
-    modalV, setModalV, setInputTitle, setInputImage, setInputDescription, setInputRating, handleAddReview, reviewEdit, setReviewEdit, handleEdit }) {
+    modalV, setModalV, setInputTitle, setInputImage, setInputDescription, setInputRating, handleAddReview, reviewEdit, handleEdit }) {
     //close  modal
     const handleClose = () => {
         setModalV(false);

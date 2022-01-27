@@ -5,7 +5,6 @@ import ListItems from './ListItems';
 import InputModal from './InputModal';
 
 function Home(props) {
-    const [editV, setEditV] = useState(false);
     const [reviewApi, setReviewApi] = useState(null);
     const getReview = async () => {
         const response = await fetch("https://movie-reviewer-backend.herokuapp.com/review", {
@@ -43,7 +42,7 @@ function Home(props) {
                 },
                 body: JSON.stringify(item)
             }).then(response => response.json()).then(data => {
-                console.log(data)
+                getReview();
             });
         };
     //modal 
@@ -84,7 +83,6 @@ function Home(props) {
                 setReviewApi={setReviewApi}
                 getReview={getReview}
                 setModalV={setModalV}
-                setEditV={setEditV}
                 handleEdit={handleEdit}
                 handleTriggerEdit={handleTriggerEdit}
             />
