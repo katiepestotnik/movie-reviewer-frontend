@@ -53,7 +53,7 @@ export const HeaderText = styled.Text`
 //listItems
 export const List = styled.TouchableHighlight`
   background-color: ${colors.middle};
-  min-height: 85px;
+  flex: 1;
   width: 100%;
   padding: 15px;
   justify-content: space-around;
@@ -67,6 +67,7 @@ export const ReviewTitle = styled.Text`
   font-weight: 900;
   font-family: ${fontStyle};
   padding-bottom: 5px;
+  color: ${colors.main};
 `
 export const ReviewText = styled.Text`
   font-size: 16px;

@@ -25,3 +25,5 @@ react-hook-form
  1242X2436
 
 https://icons.expo.fyi/
+
+remote instead of origin

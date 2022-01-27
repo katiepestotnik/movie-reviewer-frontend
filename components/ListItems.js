@@ -1,5 +1,5 @@
 import { SwipeListView } from 'react-native-swipe-list-view';
-import { Text, ImageBackground, Image} from 'react-native';
+import { Text, ImageBackground, View,Image, StyleSheet} from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useState } from 'react';
 //styled components
@@ -12,8 +12,6 @@ import {
     SwipedReviewTitle,
     colors
 } from '../styles/appStyles';
-//components
-import StarRating from '../StarRating/StarRating';
 
 function ListItems({ reviewApi, getReview, handleTriggerEdit}) {
     //key of swiped row
@@ -26,6 +24,13 @@ function ListItems({ reviewApi, getReview, handleTriggerEdit}) {
             getReview();
         });
     };
+    //stars  setup and images came from this resource: https://aboutreact.com/react-native-custom-star-rating-bar/
+    const filledStar = 'https://raw.githubusercontent.com/AboutReact/sampleresource/master/star_filled.png'
+    const emptyStar = 'https://raw.githubusercontent.com/AboutReact/sampleresource/master/star_corner.png';
+
+    //1-5 star rating with map
+    const [maxRating, setMaxRating] = useState([1, 2, 3, 4, 5]);
+
 
     return (
         <SwipeListView
@@ -48,8 +53,23 @@ function ListItems({ reviewApi, getReview, handleTriggerEdit}) {
                             <ImageBackground source={{ uri: `${images}` }} resizeMode='cover' style={{height: 150, width: 150}} />
                           </Text>
                             <ReviewText>{data.item.movieReview}</ReviewText>
-                            <StarRating/>
-                          <ReviewText>Rating: {data.item.movieRating} stars</ReviewText>
+                          <View style={styles.customRatingBarStyle}>
+                                {maxRating.map((item) => {
+                                    return (
+                                        <Image
+                                          key={item}
+                                          style={styles.starImageStyle}
+                                          source={
+                                            item <= data.item.movieRating
+                                              ? {uri: filledStar}
+                                              : {uri: emptyStar}
+                                          }
+                                        />
+
+
+                                    )
+                            })}
+                          </View>
                           </> 
                         </List>
                 )
@@ -80,5 +100,26 @@ function ListItems({ reviewApi, getReview, handleTriggerEdit}) {
         />
     );
 };
+const styles = StyleSheet.create({
+    customRatingBarStyle: {
+        flexDirection: 'row',
+    },
+    starImageStyle: {
+        width: 25,
+        height: 25,
+        resizeMode: 'cover',
+    },
+    buttonStyle: {
+        justifyContent: 'center',
+        flexDirection: 'row',
+        marginTop: 30,
+        padding: 15,
+        backgroundColor: '#8ad24e',
+      },
+      buttonTextStyle: {
+        color: '#fff',
+        textAlign: 'center',
+      },
+})
 
 export default ListItems;
