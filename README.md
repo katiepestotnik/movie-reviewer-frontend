@@ -1,29 +1,42 @@
+# Movie Reviewer
+
+User can create, read, update and delete movie reviews on a mobile application.
+
+<img src="./assets/capstoneimage.png" alt="main page" height="250">
+
+Live Site: https://expo.dev/@katiepestotnik/movie-reviewer
+
+Technologies:
+- React Native
+- Styled Components
+- JavaScript
+- Backend API
+    - https://github.com/katiepestotnik/reviewer-backend
+
 Able to make this app from the following sources:
-Simple todo app tutorial: https://www.youtube.com/watch?v=0c0v_40MPq8
-More complex app tutorial: https://codewithmosh.com/p/the-ultimate-react-native-course
-Refresh Control used documentation:
-https://reactnative.dev/docs/refreshcontrol
-Star Rating:
-https://aboutreact.com/react-native-custom-star-rating-bar/
-Form with Formik: (could not get to work)
-https://levelup.gitconnected.com/adding-a-form-to-react-native-2f41b1dc0857
-Form Hook:(used this instead)
-https://react-hook-form.com/get-started/#ReactNative
+
+- Simple todo app tutorial: <br>https://www.youtube.com/watch?v=0c0v_40MPq8
+- More complex app tutorial: <br>https://codewithmosh.com/p/the-ultimate-react-native-course
+- Star Rating: <br>https://aboutreact.com/react-native-custom-star-rating-bar/
+- Form Hook: (couldn't get formik to work) <br>https://react-hook-form.com/get-started/#ReactNative
 
 Added Dependencies(expo install):
-styled-components,
-expo-constants,
-react-native-swipe-list-view
+- styled-components
+- expo-constants
+- react-native-swipe-list-view
 (npm install):
-formik
-react-hook-form
+- react-hook-form
 
- App Icons png
- 1024X1024 Size both android and ios
+iOS and Android<br>
 
- Splash Screen png
- 1242X2436
+Icons<br>
+- 1024X1024<br> 
 
-https://icons.expo.fyi/
+Splash Screen<br>
+- 1242X2436
+
+Future Improvements:
+- Refresh function
+- Edit to include prefilled fields of current data
 
 remote instead of origin
