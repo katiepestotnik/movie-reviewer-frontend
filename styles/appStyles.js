@@ -165,12 +165,12 @@ export const TextWarning = styled.Text`
 `
 //spinner
 export const Spinner = styled.View`
-  background-color: ${colors.black};
+  background-color: ${colors.main};
   flex: 1;  
   justify-content: center;
   align-items: center;
   margin-top: 20px;
-  height: 500px;
+  height: 400px;
 `
 //stars
 export const StarView = styled.View`
