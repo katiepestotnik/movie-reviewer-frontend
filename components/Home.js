@@ -58,10 +58,11 @@ function Home(props) {
     const handleTriggerEdit = (item) => {
         setReviewEdit(item);
         setModalV(true);
-        // setInputTitle(item.movieName);
-        // setInputImage(item.movieImage);
-        // setInputDescription(item.movieReview);
-        // setInputRating(item.movieRating);
+        //not working
+        setInputTitle(item.movieName);
+        setInputImage(item.movieImage);
+        setInputDescription(item.movieReview);
+        setInputRating(item.movieRating);
     }
 
     return (

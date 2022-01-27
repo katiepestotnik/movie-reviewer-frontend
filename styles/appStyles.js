@@ -172,3 +172,11 @@ export const Spinner = styled.View`
   margin-top: 20px;
   height: 500px;
 `
+//stars
+export const StarView = styled.View`
+  flex-direction: row;
+`
+export const StarImage = styled.Image`
+  width: 25px;
+  height: 25px;
+`

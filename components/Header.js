@@ -14,5 +14,5 @@ function Header(props) {
             <MaterialCommunityIcons name="movie-open-outline" size={60} color={colors.light} />
         </HeaderContainer>
     );
-}
+};
 export default Header;

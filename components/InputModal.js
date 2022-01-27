@@ -16,7 +16,6 @@ import {
     TextWarning
 } from '../styles/appStyles';
 
-
 function InputModal({
     modalV, setModalV, setInputTitle, setInputImage, setInputDescription, setInputRating, handleAddReview, reviewEdit, handleEdit }) {
     //close  modal
@@ -75,6 +74,7 @@ function InputModal({
                                     onBlur={onBlur}
                                     onChangeText={onChange}
                                     value={value}
+                                    autoCapitalize='words'
                                 />
                             )}
                             name="movieName"
@@ -148,5 +148,4 @@ function InputModal({
         </>
     );
 };
-
 export default InputModal;

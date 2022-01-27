@@ -10,6 +10,5 @@ function SpinnerComponent(props) {
             />
         </Spinner>
     );
-}
-
+};
 export default SpinnerComponent;
