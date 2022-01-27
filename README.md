@@ -9,6 +9,9 @@ Live Site: https://expo.dev/@katiepestotnik/movie-reviewer
 Technologies:
 - React Native
 - Styled Components
+- Expo Go
+- XCode iOS simulator
+- Android Studio Android emulator
 - JavaScript
 - Backend API
     - https://github.com/katiepestotnik/reviewer-backend
