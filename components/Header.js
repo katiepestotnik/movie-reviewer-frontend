@@ -4,7 +4,7 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 import {
     HeaderContainer,
     HeaderText,
-    colors
+    colors,
 } from '../styles/appStyles';
 
 function Header(props) {

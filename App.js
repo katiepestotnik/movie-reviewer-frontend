@@ -1,27 +1,38 @@
 import { StatusBar } from 'expo-status-bar';
 import {ScrollView, LogBox } from 'react-native';
-import {useEffect} from 'react'
+import { useEffect } from 'react'
+//component manages navigation tree and state
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 //styled components
-import {Container} from './styles/appStyles'
+import {colors, Container} from './styles/appStyles'
 
 //components
 import Home from './components/Home';
+import Intro from './components/Intro';
 
-export default function App() {
+//returns object of Screen and Navigator
+const Stack = createNativeStackNavigator();
+
+export default function App(props) {
   //remove virtualized error
   useEffect(() => {
     LogBox.ignoreLogs(['VirtualizedLists should never be nested']);
   }, [])
 
   return (
-    <>
-      <Container>
-      <StatusBar style="light" />
-        <ScrollView>
-          <Home />
-        </ScrollView>
+    <Container>
+    <StatusBar style="light" />
+    <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name="Welcome">{props=><Intro {...props}/>}</Stack.Screen>
+        <Stack.Screen name="Home" component={Home}/>
+        </Stack.Navigator>
+      </NavigationContainer>
       </Container>
-    </>
+
+
+
   );
 };

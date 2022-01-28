@@ -17,7 +17,8 @@ import {
     SwipedReviewTitle,
     StarView,
     StarImage,
-    colors
+    colors,
+    Container
 } from '../styles/appStyles';
 
 function ListItems({ reviewApi, getReview, handleTriggerEdit }) {
@@ -42,6 +43,7 @@ function ListItems({ reviewApi, getReview, handleTriggerEdit }) {
             return <SpinnerComponent/>
         } else {
             return (
+                <Container>
                 <SwipeListView
                     data={reviewApi}
                     keyExtractor={(item) => item._id.toString()
@@ -106,7 +108,8 @@ function ListItems({ reviewApi, getReview, handleTriggerEdit }) {
                     onRowClose={() => {
                         setSwipedRow(null)
                     }}
-                />
+                    />
+                    </Container>
             );
     };
 

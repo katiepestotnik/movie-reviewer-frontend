@@ -1,4 +1,4 @@
-import { Modal } from 'react-native';
+import { Modal, StyleSheet, View } from 'react-native';
 import { Entypo, MaterialCommunityIcons, AntDesign } from '@expo/vector-icons';
 import { useForm, Controller } from 'react-hook-form';
 
@@ -13,7 +13,7 @@ import {
     HeaderText,
     colors,
     StyledInput,
-    TextWarning
+    TextWarning, 
 } from '../styles/appStyles';
 
 function InputModal({
@@ -47,10 +47,12 @@ function InputModal({
         }
     };
     return (
-        <>
+        <>  
+            <View style={styles.buttonContainer}>
             <ModalButton onPress={()=>setModalV(true)}>
                 <Entypo name="add-to-list" size={30}/>
-            </ModalButton>
+                </ModalButton>
+                </View>
             <Modal
                 animationType='slide'
                 transparent={true}
@@ -148,4 +150,9 @@ function InputModal({
         </>
     );
 };
+const styles = StyleSheet.create({
+    buttonContainer: {
+        backgroundColor: colors.main
+    }
+})
 export default InputModal;

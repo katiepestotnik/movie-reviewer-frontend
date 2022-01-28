@@ -36,8 +36,8 @@ export const Container = styled.SafeAreaView`
 
 // Header
 export const HeaderContainer = styled.View`
-  padding-vertical: 10px;
-  margin-bottom: 10px;
+  background-color: ${colors.main}; 
+  padding-vertical: 20px;
   justify-content: space-between;
   align-items: center;
 `;
@@ -169,7 +169,6 @@ export const Spinner = styled.View`
   flex: 1;  
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
   height: 400px;
 `
 //stars

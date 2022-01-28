@@ -27,8 +27,12 @@ Added Dependencies(expo install):
 - styled-components
 - expo-constants
 - react-native-swipe-list-view
+- react-native-screens
+- react-native-safe-area-context
 (npm install):
 - react-hook-form
+- @react-navigation/native
+- @react-navigation/native-stack
 
 iOS and Android<br>
 
