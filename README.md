@@ -46,7 +46,4 @@ Splash Screen<br>
 Future Improvements:
 - Refresh function
 - Edit to include prefilled fields of current data
-
-remote instead of origin
-
-https://blog.waldo.io/add-an-image-picker-react-native-app/
+- Allow user to upload photos from phone: <br> https://blog.waldo.io/add-an-image-picker-react-native-app/
