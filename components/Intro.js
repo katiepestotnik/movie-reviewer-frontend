@@ -14,7 +14,10 @@ function Intro({ navigation }) {
         <>
             <Header/>
             <IntroContainer>
-                <TouchableHighlight underlayColor={colors.main} onPress={() => navigation.navigate('Home')}>
+                <TouchableHighlight
+                    underlayColor={colors.main}
+                    onPress={() => navigation.navigate('Home')}
+                >
                     <IntroImage
                         source={image}
                         onLoadStart={() => {

@@ -28,8 +28,9 @@ export const IntroContainer = styled.View`
   padding-bottom: 90px;
 `
 export const IntroImage = styled.ImageBackground`
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 350px;
+  
 `
 //main page styles
 export const Container = styled.SafeAreaView`
