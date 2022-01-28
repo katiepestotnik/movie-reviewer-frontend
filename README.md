@@ -43,3 +43,6 @@ Future Improvements:
 - Edit to include prefilled fields of current data
 
 remote instead of origin
+
+https://blog.waldo.io/add-an-image-picker-react-native-app/
+https://reactnavigation.org/docs/getting-started/
