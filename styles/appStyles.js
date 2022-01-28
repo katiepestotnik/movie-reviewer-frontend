@@ -1,14 +1,6 @@
 import styled from "styled-components";
 import {
-  Text,
-  View,
-  TouchableOpacity,
-  TouchableHighlight,
-  SafeAreaView,
-  TextInput,
-  Image,
-  Platform,
-  ImageBackground
+  Platform
 } from "react-native";
 import Constants from "expo-constants";
 
@@ -23,15 +15,27 @@ export const colors = {
   };
 
   //style variables
+//no longer need
 const statusBarHeight = Constants.statusBarHeight;
 const fontStyle = Platform.OS === "android"? "Roboto": 'Futura-MediumItalic'
 
+//intro
+export const IntroContainer = styled.View`
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  background-color: ${colors.main};
+  padding-bottom: 90px;
+`
+export const IntroImage = styled.ImageBackground`
+  width: 250px;
+  height: 250px;
+`
 //main page styles
 export const Container = styled.SafeAreaView`
   background-color: ${colors.main};
   padding: 20px;
   flex: 1;
-  padding-top: ${statusBarHeight}px;
 `;
 
 // Header
@@ -109,6 +113,11 @@ align-items: center;
 align-self: center;
 bottom: 10px;
 `;
+
+export const ButtonContainer = styled.View`
+background-color: ${colors.main}
+`
+
 export const ModalContainer = styled.View`
   padding: 20px;
   justify-content: center;
@@ -169,7 +178,8 @@ export const Spinner = styled.View`
   flex: 1;  
   justify-content: center;
   align-items: center;
-  height: 400px;
+  height: 300px;
+  padding-bottom: 200px
 `
 //stars
 export const StarView = styled.View`

@@ -22,13 +22,14 @@ Able to make this app from the following sources:
 - More complex app tutorial: <br>https://codewithmosh.com/p/the-ultimate-react-native-course
 - Star Rating: <br>https://aboutreact.com/react-native-custom-star-rating-bar/
 - Form Hook: (couldn't get formik to work) <br>https://react-hook-form.com/get-started/#ReactNative
+- Navigation: <br>https://reactnavigation.org/docs/getting-started/
 
 Added Dependencies(expo install):
 - styled-components
 - expo-constants
 - react-native-swipe-list-view
 - react-native-screens
-- react-native-safe-area-context
+- react-native-safe-area-context<br><br>
 (npm install):
 - react-hook-form
 - @react-navigation/native
@@ -49,4 +50,3 @@ Future Improvements:
 remote instead of origin
 
 https://blog.waldo.io/add-an-image-picker-react-native-app/
-https://reactnavigation.org/docs/getting-started/

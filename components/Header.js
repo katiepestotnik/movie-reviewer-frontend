@@ -1,5 +1,4 @@
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-
 //styled components
 import {
     HeaderContainer,

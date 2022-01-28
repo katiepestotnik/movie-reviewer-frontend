@@ -1,4 +1,4 @@
-import { Modal, StyleSheet, View } from 'react-native';
+import { Modal } from 'react-native';
 import { Entypo, MaterialCommunityIcons, AntDesign } from '@expo/vector-icons';
 import { useForm, Controller } from 'react-hook-form';
 
@@ -13,7 +13,8 @@ import {
     HeaderText,
     colors,
     StyledInput,
-    TextWarning, 
+    TextWarning,
+    ButtonContainer
 } from '../styles/appStyles';
 
 function InputModal({
@@ -48,11 +49,13 @@ function InputModal({
     };
     return (
         <>  
-            <View style={styles.buttonContainer}>
-            <ModalButton onPress={()=>setModalV(true)}>
+            <ButtonContainer>
+                <ModalButton onPress={() => {
+                    setModalV(true)
+                }}>
                 <Entypo name="add-to-list" size={30}/>
                 </ModalButton>
-                </View>
+                </ButtonContainer>
             <Modal
                 animationType='slide'
                 transparent={true}
@@ -140,9 +143,6 @@ function InputModal({
                             <ModalTouchable onPress={handleSubmit(onSubmit)}>
                                 <AntDesign name="checkcircle" size={40} color={colors.main }/>
                             </ModalTouchable>
-                            {/* <ModalTouchable onPress={()=>console.log('edit')}>
-                                <MaterialCommunityIcons name="database-edit" size={40} color={colors.main }/>
-                            </ModalTouchable> */}
                         </ModalInputButton>
                     </ModalView>
                 </ModalContainer>
@@ -150,9 +150,4 @@ function InputModal({
         </>
     );
 };
-const styles = StyleSheet.create({
-    buttonContainer: {
-        backgroundColor: colors.main
-    }
-})
 export default InputModal;

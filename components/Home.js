@@ -46,10 +46,10 @@ function Home(props) {
             });
         };
     //modal 
-    const [modalV, setModalV] = useState(false)
+    const [modalV, setModalV] = useState(false);
     //input for the four fields
     const [inputTitle, setInputTitle] = useState();
-    const [inputImage, setInputImage] = useState()
+    const [inputImage, setInputImage] = useState();
     const [inputDescription, setInputDescription] = useState();
     const [inputRating, setInputRating] = useState();
 
@@ -58,11 +58,6 @@ function Home(props) {
     const handleTriggerEdit = (item) => {
         setReviewEdit(item);
         setModalV(true);
-        //not working
-        setInputTitle(item.movieName);
-        setInputImage(item.movieImage);
-        setInputDescription(item.movieReview);
-        setInputRating(item.movieRating);
     }
 
     return (

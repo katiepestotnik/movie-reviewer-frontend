@@ -32,11 +32,10 @@ function ListItems({ reviewApi, getReview, handleTriggerEdit }) {
             getReview();
         });
     };
-    //stars  setup achieved with the help of resource: https://aboutreact.com/react-native-custom-star-rating-bar/
     const filledStar = 'https://www.outsystems.com/Forge_BL/rest/ComponentThumbnail/GetURL_ComponentThumbnail?ProjectImageId=34673'
     const emptyStar = 'https://raw.githubusercontent.com/AboutReact/sampleresource/master/star_corner.png';
 
-    //1-5 star rating with map
+    //1-5 star rating with map reference in readme
     const [maxRating, setMaxRating] = useState([1, 2, 3, 4, 5]);
 
         if (!reviewApi) {
@@ -75,13 +74,11 @@ function ListItems({ reviewApi, getReview, handleTriggerEdit }) {
                                                       : {uri: emptyStar}
                                                   }
                                                 />
-        
-        
                                             )
                                     })}
-                                  </StarView>
-                                  </> 
-                                </List>
+                                    </StarView>
+                                </> 
+                            </List>
                         )
                     }}
                     renderHiddenItem={(data, rowMap) => {
@@ -112,7 +109,5 @@ function ListItems({ reviewApi, getReview, handleTriggerEdit }) {
                     </Container>
             );
     };
-
 };
-
 export default ListItems;
