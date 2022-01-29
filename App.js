@@ -26,8 +26,25 @@ export default function App(props) {
     <StatusBar style="light" />
     <NavigationContainer>
         <Stack.Navigator>
-          <Stack.Screen name="Welcome">{props=><Intro {...props}/>}</Stack.Screen>
-        <Stack.Screen name="Home" component={Home}/>
+          <Stack.Screen name="Welcome"
+            options={{
+              headerStyle: {
+                backgroundColor: colors.main
+              },
+              headerTintColor: colors.light,
+              headerTitleAlign: "center"
+          }}>{props => <Intro {...props} />}</Stack.Screen>
+          <Stack.Screen
+            name="Home"
+            component={Home}
+            options={{
+              headerStyle: {
+                backgroundColor: colors.main
+              },
+              headerTintColor: colors.light,
+              headerTitleAlign: 'center'
+            }}
+            />
         </Stack.Navigator>
       </NavigationContainer>
       </Container>

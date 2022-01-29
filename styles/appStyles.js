@@ -35,8 +35,8 @@ export const IntroImage = styled.ImageBackground`
 //main page styles
 export const Container = styled.SafeAreaView`
   background-color: ${colors.main};
-  padding: 20px;
   flex: 1;
+  padding-top: ${statusBarHeight}px;
 `;
 
 // Header
