@@ -96,11 +96,7 @@ function ListItems({ reviewApi, getReview, handleTriggerEdit }) {
                     previewOpenDelay={1500}
                     disableLeftSwipe={true}
                     showsVerticalScrollIndicator={false}
-                    onRowOpen={(rowKey, rowMap) => {
-                        setTimeout(() => {
-                            rowMap[rowKey].closeRow()
-                        }, 2000)
-                    }}
+
                     previewRowKey={reviewApi[0]._id}
                     onRowClose={() => {
                         setSwipedRow(null)
